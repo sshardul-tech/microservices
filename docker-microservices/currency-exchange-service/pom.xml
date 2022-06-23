@@ -95,6 +95,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				
+				<!--adding attribute for creating docker image -->
+				<configuration>
+				<image>
+				<name>sshardul04sandhya/tech-${project.artifactId}:${project.version}</name>
+				</image>
+				<pullPolicy>IF_NOT_PRESENT</pullPolicy>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
